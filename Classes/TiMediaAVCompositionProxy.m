@@ -23,12 +23,12 @@
     return self;
 }
 
-- (id)createAudioTrack {
+- (id)createAudioTrack:(id)args {
     AVMutableCompositionTrack *track = [self.composition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
     return [[[TiMediaAVCompositionTrackProxy alloc] initWithTrack: track] autorelease];
 }
 
-- (id)createVideoTrack {
+- (id)createVideoTrack:(id)args {
     AVMutableCompositionTrack *track = [self.composition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
     return [[[TiMediaAVCompositionTrackProxy alloc] initWithTrack: track] autorelease];
 }

@@ -74,6 +74,7 @@
 		6F0FB3401408F3BB001BFC21 /* TiMediaAVAssetProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVAssetProxy.m; sourceTree = "<group>"; };
 		6F0FB3431408F857001BFC21 /* TiMediaAVAssetExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVAssetExportSession.h; sourceTree = "<group>"; };
 		6F0FB3441408F857001BFC21 /* TiMediaAVAssetExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVAssetExportSession.m; sourceTree = "<group>"; };
+		6F0FB3471409070E001BFC21 /* app.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = app.js; path = example/app.js; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgUrishTitaniumMedia_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libOrgUrishTitaniumMedia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOrgUrishTitaniumMedia.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,12 +132,12 @@
 				6F0FB33014086EBB001BFC21 /* TiMediaCMTimeProxy.m */,
 				6F0FB32A14083363001BFC21 /* TiMediaAVCompositionProxy.h */,
 				6F0FB32B14083363001BFC21 /* TiMediaAVCompositionProxy.m */,
+				6F0FB33B14087526001BFC21 /* TiMediaAVCompositionTrackProxy.h */,
+				6F0FB33C14087526001BFC21 /* TiMediaAVCompositionTrackProxy.m */,
 				6F0FB333140871B4001BFC21 /* TiMediaAVURLAssetProxy.h */,
 				6F0FB334140871B4001BFC21 /* TiMediaAVURLAssetProxy.m */,
 				6F0FB3371408733A001BFC21 /* TiMediaCMTimeRangeProxy.h */,
 				6F0FB3381408733A001BFC21 /* TiMediaCMTimeRangeProxy.m */,
-				6F0FB33B14087526001BFC21 /* TiMediaAVCompositionTrackProxy.h */,
-				6F0FB33C14087526001BFC21 /* TiMediaAVCompositionTrackProxy.m */,
 				6F0FB33F1408F3BB001BFC21 /* TiMediaAVAssetProxy.h */,
 				6F0FB3401408F3BB001BFC21 /* TiMediaAVAssetProxy.m */,
 			);
@@ -147,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				AA747D9E0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch */,
+				6F0FB3471409070E001BFC21 /* app.js */,
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
 			);
 			name = "Other Sources";

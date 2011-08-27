@@ -3,10 +3,11 @@
 //  timedia
 //
 //  Created by Uri Shaked on 8/27/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Uri Shaked. All rights reserved.
 //
 
 #import "TiMediaCMTimeProxy.h"
+#import "TiUtils.h"
 
 @implementation TiMediaCMTimeProxy
 
@@ -46,6 +47,11 @@
 - (id)subtarct:(id)args {
     TiMediaCMTimeProxy * other = [args objectAtIndex:0];
     return [[[TiMediaCMTimeProxy alloc] initWithTime: CMTimeSubtract(self.time, other.time)] autorelease];
+}
+
+- (id)multiply:(id)args {
+    Float64 multiplier = [TiUtils doubleValue:[args objectAtIndex:0]];
+    return [[[TiMediaCMTimeProxy alloc] initWithTime: CMTimeMultiplyByFloat64(self.time, multiplier)] autorelease];
 }
 
 - (id)compare:(id)args {

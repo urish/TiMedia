@@ -31,18 +31,18 @@
 
 - (id)insertAudio:(id)args {
     TiMediaCMTimeProxy *targetTime = [args objectAtIndex:0];
-    TiMediaAVURLAssetProxy *source = [args objectAtIndex:1];
+    TiMediaAVAssetProxy *source = [args objectAtIndex:1];
     TiMediaCMTimeRangeProxy *sourceRange = [args objectAtIndex:2];
-    AVCompositionTrack *sourceTrack = [[source.urlAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex: 0];
+    AVCompositionTrack *sourceTrack = [[source.asset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex: 0];
     [self.mutableTrack insertTimeRange:sourceRange.timeRange ofTrack:sourceTrack atTime:targetTime.time error:nil];
     return nil;
 }
 
 - (id)insertVideo:(id)args {
     TiMediaCMTimeProxy *targetTime = [args objectAtIndex:0];
-    TiMediaAVURLAssetProxy *source = [args objectAtIndex:1];
+    TiMediaAVAssetProxy *source = [args objectAtIndex:1];
     TiMediaCMTimeRangeProxy *sourceRange = [args objectAtIndex:2];
-    AVCompositionTrack *sourceTrack = [[source.urlAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex: 0];
+    AVCompositionTrack *sourceTrack = [[source.asset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex: 0];
     [self.mutableTrack insertTimeRange:sourceRange.timeRange ofTrack:sourceTrack atTime:targetTime.time error:nil];
     return nil;
 }

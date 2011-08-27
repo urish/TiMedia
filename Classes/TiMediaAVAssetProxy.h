@@ -14,7 +14,7 @@
     AVAsset *_asset;
 }
 
-- (id)initWithAsset: asset;
+- (id)initWithAsset: (AVAsset*)asset;
 
 @property (nonatomic, retain) AVAsset * asset;
 

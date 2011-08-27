@@ -93,11 +93,14 @@
 }
 
 - (id)start:(id)args {
+    [self.exportSession retain];
+    NSLog(@"Starting export session (outputURL=%@, outputFileType=%@)", self.exportSession.outputURL, self.exportSession.outputFileType);
     [self.exportSession exportAsynchronouslyWithCompletionHandler: ^{
-        NSLog(@"Media export completed");
+        NSLog(@"Media export completed, status=%@", [self status]);
         NSString *status = [self status];
-        NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:status, @"status", nil];
-        [self fireEvent:@"exportComplete" withObject:params];
+        NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:status, @"status", self.exportSession.error, "@error", nil];
+        [self fireEvent:@"complete" withObject:params];
+        [self.exportSession autorelease];
     }];
     return nil;
 }

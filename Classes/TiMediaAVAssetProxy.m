@@ -3,7 +3,7 @@
 //  timedia
 //
 //  Created by Uri Shaked on 8/27/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Uri Shaked. All rights reserved.
 //
 
 #import "TiMediaAVAssetProxy.h"
@@ -14,11 +14,11 @@
 
 @synthesize asset = _asset;
 
-- (id)initWithAsset: asset
+- (id)initWithAsset: (AVAsset*)asset
 {
     self = [super init];
     if (self) {
-        self.asset = _asset;
+        self.asset = asset;
     }
     
     return self;

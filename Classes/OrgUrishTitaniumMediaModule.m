@@ -115,6 +115,38 @@
     return AVAssetExportPresetPassthrough;
 }
 
+
+-(id)AVFileTypeQuickTimeMovie {
+    return AVFileTypeQuickTimeMovie;
+}
+-(id)AVFileTypeMPEG4 {
+    return AVFileTypeMPEG4;
+}
+-(id)AVFileTypeAppleM4V {
+    return AVFileTypeAppleM4V;
+}
+-(id)AVFileTypeAppleM4A {
+    return AVFileTypeAppleM4A;
+}
+-(id)AVFileType3GPP {
+    return AVFileType3GPP;
+}
+-(id)AVFileTypeCoreAudioFormat {
+    return AVFileTypeCoreAudioFormat;
+}
+-(id)AVFileTypeWAVE {
+    return AVFileTypeWAVE;
+}
+-(id)AVFileTypeAIFF {
+    return AVFileTypeAIFF;
+}
+-(id)AVFileTypeAIFC {
+    return AVFileTypeAIFC;
+}
+-(id)AVFileTypeAMR {
+    return AVFileTypeAMR;
+}
+
 #pragma Public APIs
 
 -(id)createAVComposition:(id)args
@@ -126,7 +158,12 @@
 {
     NSString *url = [args objectAtIndex:0];
     NSURL *urlUrl = [NSURL URLWithString:url];
-    return [[[TiMediaAVURLAssetProxy alloc] initWithAsset:[AVURLAsset URLAssetWithURL:urlUrl options:nil]] autorelease];
+    AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:urlUrl options:nil];
+    if (urlAsset != nil) {
+        return [[[TiMediaAVURLAssetProxy alloc] initWithAsset:urlAsset] autorelease];
+    }
+    NSLog(@"Warning: AVURLAsset creation failed! (url=%@)", url);
+    return nil;
 }
 
 -(id)createAVAssetExportSession:(id)args 
@@ -134,8 +171,14 @@
     TiMediaAVAssetProxy *assetProxy = [args objectAtIndex:0];
     NSString *presetName = [args objectAtIndex:1];
     
-    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc] initWithAsset: assetProxy.asset presetName:presetName];
-    return [[[TiMediaAVAssetExportSession alloc] initWithExportSession: exportSession] autorelease];
+    NSLog(@"AssetProxy: %@, obj1: %@ ass %@", assetProxy, [assetProxy composition], [assetProxy asset]);
+    
+    AVAssetExportSession *exportSession = [AVAssetExportSession exportSessionWithAsset:assetProxy.asset presetName:presetName];
+    if (exportSession != nil) {
+        return [[[TiMediaAVAssetExportSession alloc] initWithExportSession: exportSession] autorelease];
+    }
+    NSLog(@"Warning: AVAssetExportSession creation failed! (asset=%@, presetName=%@)", assetProxy.asset, presetName);
+    return nil;
 }
 
 -(id)zeroTime
