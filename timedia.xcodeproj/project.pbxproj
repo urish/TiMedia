@@ -36,6 +36,10 @@
 		6F0FB33A1408733A001BFC21 /* TiMediaCMTimeRangeProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB3381408733A001BFC21 /* TiMediaCMTimeRangeProxy.m */; };
 		6F0FB33D14087527001BFC21 /* TiMediaAVCompositionTrackProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0FB33B14087526001BFC21 /* TiMediaAVCompositionTrackProxy.h */; };
 		6F0FB33E14087527001BFC21 /* TiMediaAVCompositionTrackProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB33C14087526001BFC21 /* TiMediaAVCompositionTrackProxy.m */; };
+		6F0FB3411408F3BC001BFC21 /* TiMediaAVAssetProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0FB33F1408F3BB001BFC21 /* TiMediaAVAssetProxy.h */; };
+		6F0FB3421408F3BC001BFC21 /* TiMediaAVAssetProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB3401408F3BB001BFC21 /* TiMediaAVAssetProxy.m */; };
+		6F0FB3451408F858001BFC21 /* TiMediaAVAssetExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0FB3431408F857001BFC21 /* TiMediaAVAssetExportSession.h */; };
+		6F0FB3461408F858001BFC21 /* TiMediaAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB3441408F857001BFC21 /* TiMediaAVAssetExportSession.m */; };
 		AA747D9F0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +70,10 @@
 		6F0FB3381408733A001BFC21 /* TiMediaCMTimeRangeProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaCMTimeRangeProxy.m; sourceTree = "<group>"; };
 		6F0FB33B14087526001BFC21 /* TiMediaAVCompositionTrackProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVCompositionTrackProxy.h; sourceTree = "<group>"; };
 		6F0FB33C14087526001BFC21 /* TiMediaAVCompositionTrackProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVCompositionTrackProxy.m; sourceTree = "<group>"; };
+		6F0FB33F1408F3BB001BFC21 /* TiMediaAVAssetProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVAssetProxy.h; sourceTree = "<group>"; };
+		6F0FB3401408F3BB001BFC21 /* TiMediaAVAssetProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVAssetProxy.m; sourceTree = "<group>"; };
+		6F0FB3431408F857001BFC21 /* TiMediaAVAssetExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVAssetExportSession.h; sourceTree = "<group>"; };
+		6F0FB3441408F857001BFC21 /* TiMediaAVAssetExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVAssetExportSession.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgUrishTitaniumMedia_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libOrgUrishTitaniumMedia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOrgUrishTitaniumMedia.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +125,8 @@
 				24DE9E1011C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* OrgUrishTitaniumMediaModule.h */,
 				24DD6CF81134B3F500162E58 /* OrgUrishTitaniumMediaModule.m */,
+				6F0FB3431408F857001BFC21 /* TiMediaAVAssetExportSession.h */,
+				6F0FB3441408F857001BFC21 /* TiMediaAVAssetExportSession.m */,
 				6F0FB32F14086EBB001BFC21 /* TiMediaCMTimeProxy.h */,
 				6F0FB33014086EBB001BFC21 /* TiMediaCMTimeProxy.m */,
 				6F0FB32A14083363001BFC21 /* TiMediaAVCompositionProxy.h */,
@@ -127,6 +137,8 @@
 				6F0FB3381408733A001BFC21 /* TiMediaCMTimeRangeProxy.m */,
 				6F0FB33B14087526001BFC21 /* TiMediaAVCompositionTrackProxy.h */,
 				6F0FB33C14087526001BFC21 /* TiMediaAVCompositionTrackProxy.m */,
+				6F0FB33F1408F3BB001BFC21 /* TiMediaAVAssetProxy.h */,
+				6F0FB3401408F3BB001BFC21 /* TiMediaAVAssetProxy.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -155,6 +167,8 @@
 				6F0FB335140871B4001BFC21 /* TiMediaAVURLAssetProxy.h in Headers */,
 				6F0FB3391408733A001BFC21 /* TiMediaCMTimeRangeProxy.h in Headers */,
 				6F0FB33D14087527001BFC21 /* TiMediaAVCompositionTrackProxy.h in Headers */,
+				6F0FB3411408F3BC001BFC21 /* TiMediaAVAssetProxy.h in Headers */,
+				6F0FB3451408F858001BFC21 /* TiMediaAVAssetExportSession.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +246,8 @@
 				6F0FB336140871B4001BFC21 /* TiMediaAVURLAssetProxy.m in Sources */,
 				6F0FB33A1408733A001BFC21 /* TiMediaCMTimeRangeProxy.m in Sources */,
 				6F0FB33E14087527001BFC21 /* TiMediaAVCompositionTrackProxy.m in Sources */,
+				6F0FB3421408F3BC001BFC21 /* TiMediaAVAssetProxy.m in Sources */,
+				6F0FB3461408F858001BFC21 /* TiMediaAVAssetExportSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

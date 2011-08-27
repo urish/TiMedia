@@ -8,8 +8,9 @@
 
 #import "TiProxy.h"
 #import <AVFoundation/AVFoundation.h>
+#import "TiMediaAVAssetProxy.h"
 
-@interface TiMediaAVURLAssetProxy : TiProxy
+@interface TiMediaAVURLAssetProxy : TiMediaAVAssetProxy
 {
     AVURLAsset * _urlAsset;
 }

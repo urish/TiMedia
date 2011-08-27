@@ -14,7 +14,7 @@
 
 - (id)initWithUrlAsset: (AVURLAsset*)urlAsset
 {
-    self = [super init];
+    self = [super initWithAsset: urlAsset];
     if (self) {
         self.urlAsset = urlAsset;
     }

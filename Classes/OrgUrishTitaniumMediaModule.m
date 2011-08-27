@@ -12,6 +12,7 @@
 #import "TiMediaCMTimeProxy.h"
 #import "TiMediaCMTimeRangeProxy.h"
 #import "TiMediaAVURLAssetProxy.h"
+#import "TiMediaAVAssetExportSession.h"
 
 @implementation OrgUrishTitaniumMediaModule
 
@@ -118,7 +119,7 @@
 
 -(id)createAVComposition:(id)args
 {
-	return [[[TiMediaAVCompositionProxy alloc] init] autorelease];
+	return [[[TiMediaAVCompositionProxy alloc] initWithComposition:[AVMutableComposition composition]] autorelease];
 }
 
 -(id)createAVURLAsset:(id)args
@@ -126,6 +127,15 @@
     NSString *url = [args objectAtIndex:0];
     NSURL *urlUrl = [NSURL URLWithString:url];
     return [[[TiMediaAVURLAssetProxy alloc] initWithAsset:[AVURLAsset URLAssetWithURL:urlUrl options:nil]] autorelease];
+}
+
+-(id)createAVAssetExportSession:(id)args 
+{
+    TiMediaAVAssetProxy *assetProxy = [args objectAtIndex:0];
+    NSString *presetName = [args objectAtIndex:1];
+    
+    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc] initWithAsset: assetProxy.asset presetName:presetName];
+    return [[[TiMediaAVAssetExportSession alloc] initWithExportSession: exportSession] autorelease];
 }
 
 -(id)zeroTime

@@ -15,7 +15,7 @@
 
 @synthesize track = _track;
 
-- (id)initWithTrack:(AVMutableCompositionTrack *)track
+- (id)initWithTrack:(AVCompositionTrack *)track
 {
     self = [super init];
     if (self) {
@@ -25,12 +25,16 @@
     return self;
 }
 
+- (AVMutableCompositionTrack*) mutableTrack {
+    return (AVMutableCompositionTrack*)self.track;
+}
+
 - (id)insertAudio:(id)args {
     TiMediaCMTimeProxy *targetTime = [args objectAtIndex:0];
     TiMediaAVURLAssetProxy *source = [args objectAtIndex:1];
     TiMediaCMTimeRangeProxy *sourceRange = [args objectAtIndex:2];
     AVCompositionTrack *sourceTrack = [[source.urlAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex: 0];
-    [self.track insertTimeRange:sourceRange.timeRange ofTrack:sourceTrack atTime:targetTime.time error:nil];
+    [self.mutableTrack insertTimeRange:sourceRange.timeRange ofTrack:sourceTrack atTime:targetTime.time error:nil];
     return nil;
 }
 
@@ -39,7 +43,7 @@
     TiMediaAVURLAssetProxy *source = [args objectAtIndex:1];
     TiMediaCMTimeRangeProxy *sourceRange = [args objectAtIndex:2];
     AVCompositionTrack *sourceTrack = [[source.urlAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex: 0];
-    [self.track insertTimeRange:sourceRange.timeRange ofTrack:sourceTrack atTime:targetTime.time error:nil];
+    [self.mutableTrack insertTimeRange:sourceRange.timeRange ofTrack:sourceTrack atTime:targetTime.time error:nil];
     return nil;
 }
 
@@ -47,7 +51,7 @@
     TiMediaCMTimeProxy *targetTime = [args objectAtIndex:0];
     TiMediaAVCompositionTrackProxy *source = [args objectAtIndex:1];
     TiMediaCMTimeRangeProxy *sourceRange = [args objectAtIndex:2];
-    [self.track insertTimeRange:sourceRange.timeRange ofTrack:source.track atTime:targetTime.time error:nil];
+    [self.mutableTrack insertTimeRange:sourceRange.timeRange ofTrack:source.track atTime:targetTime.time error:nil];
     return nil;
 }
 

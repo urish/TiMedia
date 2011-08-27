@@ -3,20 +3,21 @@
 //  timedia
 //
 //  Created by Uri Shaked on 8/26/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Uri Shaked. All rights reserved.
 //
 
 #import "TiMediaAVCompositionProxy.h"
+#import "TiMediaAVCompositionTrackProxy.h"
 
 @implementation TiMediaAVCompositionProxy
 
 @synthesize composition = _composition;
 
-- (id)init
+- (id)initWithComposition: (AVMutableComposition*)composition
 {
-    self = [super init];
+    self = [super initWithAsset:composition];
     if (self) {
-        self.composition = [[AVMutableComposition composition] retain];
+        self.composition = composition;
     }
     
     return self;

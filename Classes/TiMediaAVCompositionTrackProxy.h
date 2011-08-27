@@ -11,11 +11,11 @@
 
 @interface TiMediaAVCompositionTrackProxy : TiProxy
 {
-    AVMutableCompositionTrack *_track;
+    AVCompositionTrack *_track;
 }
 
--(id)initWithTrack: (AVMutableCompositionTrack*)track;
+-(id)initWithTrack: (AVCompositionTrack*)track;
 
-@property (nonatomic, retain) AVMutableCompositionTrack *track;
+@property (nonatomic, retain) AVCompositionTrack *track;
 
 @end

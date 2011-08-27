@@ -8,11 +8,14 @@
 
 #include <AVFoundation/AVFoundation.h>
 #import "TiProxy.h"
+#import "TiMediaAVAssetProxy.h"
 
-@interface TiMediaAVCompositionProxy : TiProxy
+@interface TiMediaAVCompositionProxy : TiMediaAVAssetProxy
 {
     AVMutableComposition * _composition;
 }
+
+- (id)initWithComposition: (AVMutableComposition*)composition;
 
 @property (nonatomic,retain) AVMutableComposition *composition;
 
