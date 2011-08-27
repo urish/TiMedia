@@ -26,6 +26,16 @@
 		24DD6CFA1134B3F500162E58 /* OrgUrishTitaniumMediaModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* OrgUrishTitaniumMediaModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.m */; };
+		6F0FB32C14083364001BFC21 /* TiMediaAVCompositionProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0FB32A14083363001BFC21 /* TiMediaAVCompositionProxy.h */; };
+		6F0FB32D14083364001BFC21 /* TiMediaAVCompositionProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB32B14083363001BFC21 /* TiMediaAVCompositionProxy.m */; };
+		6F0FB33114086EBC001BFC21 /* TiMediaCMTimeProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0FB32F14086EBB001BFC21 /* TiMediaCMTimeProxy.h */; };
+		6F0FB33214086EBC001BFC21 /* TiMediaCMTimeProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB33014086EBB001BFC21 /* TiMediaCMTimeProxy.m */; };
+		6F0FB335140871B4001BFC21 /* TiMediaAVURLAssetProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0FB333140871B4001BFC21 /* TiMediaAVURLAssetProxy.h */; };
+		6F0FB336140871B4001BFC21 /* TiMediaAVURLAssetProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB334140871B4001BFC21 /* TiMediaAVURLAssetProxy.m */; };
+		6F0FB3391408733A001BFC21 /* TiMediaCMTimeRangeProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0FB3371408733A001BFC21 /* TiMediaCMTimeRangeProxy.h */; };
+		6F0FB33A1408733A001BFC21 /* TiMediaCMTimeRangeProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB3381408733A001BFC21 /* TiMediaCMTimeRangeProxy.m */; };
+		6F0FB33D14087527001BFC21 /* TiMediaAVCompositionTrackProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0FB33B14087526001BFC21 /* TiMediaAVCompositionTrackProxy.h */; };
+		6F0FB33E14087527001BFC21 /* TiMediaAVCompositionTrackProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB33C14087526001BFC21 /* TiMediaAVCompositionTrackProxy.m */; };
 		AA747D9F0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -36,19 +46,29 @@
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "timedia";
+			remoteInfo = timedia;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24DD6CF71134B3F500162E58 /* OrgUrishTitaniumMediaModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OrgUrishTitaniumMediaModule.h"; path = "Classes/OrgUrishTitaniumMediaModule.h"; sourceTree = "<group>"; };
-		24DD6CF81134B3F500162E58 /* OrgUrishTitaniumMediaModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OrgUrishTitaniumMediaModule.m"; path = "Classes/OrgUrishTitaniumMediaModule.m"; sourceTree = "<group>"; };
+		24DD6CF71134B3F500162E58 /* OrgUrishTitaniumMediaModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgUrishTitaniumMediaModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* OrgUrishTitaniumMediaModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgUrishTitaniumMediaModule.m; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
-		24DE9E0F11C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OrgUrishTitaniumMediaModuleAssets.h"; path = "Classes/OrgUrishTitaniumMediaModuleAssets.h"; sourceTree = "<group>"; };
-		24DE9E1011C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OrgUrishTitaniumMediaModuleAssets.m"; path = "Classes/OrgUrishTitaniumMediaModuleAssets.m"; sourceTree = "<group>"; };
-		AA747D9E0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OrgUrishTitaniumMedia_Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		24DE9E0F11C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgUrishTitaniumMediaModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgUrishTitaniumMediaModuleAssets.m; sourceTree = "<group>"; };
+		6F0FB32A14083363001BFC21 /* TiMediaAVCompositionProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVCompositionProxy.h; sourceTree = "<group>"; };
+		6F0FB32B14083363001BFC21 /* TiMediaAVCompositionProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVCompositionProxy.m; sourceTree = "<group>"; };
+		6F0FB32F14086EBB001BFC21 /* TiMediaCMTimeProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaCMTimeProxy.h; sourceTree = "<group>"; };
+		6F0FB33014086EBB001BFC21 /* TiMediaCMTimeProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaCMTimeProxy.m; sourceTree = "<group>"; };
+		6F0FB333140871B4001BFC21 /* TiMediaAVURLAssetProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVURLAssetProxy.h; sourceTree = "<group>"; };
+		6F0FB334140871B4001BFC21 /* TiMediaAVURLAssetProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVURLAssetProxy.m; sourceTree = "<group>"; };
+		6F0FB3371408733A001BFC21 /* TiMediaCMTimeRangeProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaCMTimeRangeProxy.h; sourceTree = "<group>"; };
+		6F0FB3381408733A001BFC21 /* TiMediaCMTimeRangeProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaCMTimeRangeProxy.m; sourceTree = "<group>"; };
+		6F0FB33B14087526001BFC21 /* TiMediaAVCompositionTrackProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVCompositionTrackProxy.h; sourceTree = "<group>"; };
+		6F0FB33C14087526001BFC21 /* TiMediaAVCompositionTrackProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVCompositionTrackProxy.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgUrishTitaniumMedia_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libOrgUrishTitaniumMedia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libOrgUrishTitaniumMedia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518D /* libOrgUrishTitaniumMedia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOrgUrishTitaniumMedia.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +99,7 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = "timedia";
+			name = timedia;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
@@ -97,8 +117,18 @@
 				24DE9E1011C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* OrgUrishTitaniumMediaModule.h */,
 				24DD6CF81134B3F500162E58 /* OrgUrishTitaniumMediaModule.m */,
+				6F0FB32F14086EBB001BFC21 /* TiMediaCMTimeProxy.h */,
+				6F0FB33014086EBB001BFC21 /* TiMediaCMTimeProxy.m */,
+				6F0FB32A14083363001BFC21 /* TiMediaAVCompositionProxy.h */,
+				6F0FB32B14083363001BFC21 /* TiMediaAVCompositionProxy.m */,
+				6F0FB333140871B4001BFC21 /* TiMediaAVURLAssetProxy.h */,
+				6F0FB334140871B4001BFC21 /* TiMediaAVURLAssetProxy.m */,
+				6F0FB3371408733A001BFC21 /* TiMediaCMTimeRangeProxy.h */,
+				6F0FB3381408733A001BFC21 /* TiMediaCMTimeRangeProxy.m */,
+				6F0FB33B14087526001BFC21 /* TiMediaAVCompositionTrackProxy.h */,
+				6F0FB33C14087526001BFC21 /* TiMediaAVCompositionTrackProxy.m */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -120,6 +150,11 @@
 				AA747D9F0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* OrgUrishTitaniumMediaModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.h in Headers */,
+				6F0FB32C14083364001BFC21 /* TiMediaAVCompositionProxy.h in Headers */,
+				6F0FB33114086EBC001BFC21 /* TiMediaCMTimeProxy.h in Headers */,
+				6F0FB335140871B4001BFC21 /* TiMediaAVURLAssetProxy.h in Headers */,
+				6F0FB3391408733A001BFC21 /* TiMediaCMTimeRangeProxy.h in Headers */,
+				6F0FB33D14087527001BFC21 /* TiMediaAVCompositionTrackProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +173,8 @@
 			);
 			dependencies = (
 			);
-			name = "timedia";
-			productName = "timedia";
+			name = timedia;
+			productName = timedia;
 			productReference = D2AAC07E0554694100DB518D /* libOrgUrishTitaniumMedia.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -192,6 +227,11 @@
 			files = (
 				24DD6CFA1134B3F500162E58 /* OrgUrishTitaniumMediaModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* OrgUrishTitaniumMediaModuleAssets.m in Sources */,
+				6F0FB32D14083364001BFC21 /* TiMediaAVCompositionProxy.m in Sources */,
+				6F0FB33214086EBC001BFC21 /* TiMediaCMTimeProxy.m in Sources */,
+				6F0FB336140871B4001BFC21 /* TiMediaAVURLAssetProxy.m in Sources */,
+				6F0FB33A1408733A001BFC21 /* TiMediaCMTimeRangeProxy.m in Sources */,
+				6F0FB33E14087527001BFC21 /* TiMediaAVCompositionTrackProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,15 +253,15 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
-				DSTROOT = "/tmp/OrgUrishTitaniumMedia.dst";
+				DSTROOT = /tmp/OrgUrishTitaniumMedia.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OrgUrishTitaniumMedia_Prefix.pch";
+				GCC_PREFIX_HEADER = OrgUrishTitaniumMedia_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = "OrgUrishTitaniumMedia";
+				PRODUCT_NAME = OrgUrishTitaniumMedia;
 			};
 			name = Debug;
 		};
@@ -231,12 +271,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = "/tmp/OrgUrishTitaniumMedia.dst";
+				DSTROOT = /tmp/OrgUrishTitaniumMedia.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OrgUrishTitaniumMedia_Prefix.pch";
+				GCC_PREFIX_HEADER = OrgUrishTitaniumMedia_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = "OrgUrishTitaniumMedia";
+				PRODUCT_NAME = OrgUrishTitaniumMedia;
 			};
 			name = Release;
 		};

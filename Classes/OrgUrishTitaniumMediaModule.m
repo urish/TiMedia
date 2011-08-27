@@ -8,6 +8,10 @@
 #import "TiBase.h"
 #import "TiHost.h"
 #import "TiUtils.h"
+#import "TiMediaAVCompositionProxy.h"
+#import "TiMediaCMTimeProxy.h"
+#import "TiMediaCMTimeRangeProxy.h"
+#import "TiMediaAVURLAssetProxy.h"
 
 @implementation OrgUrishTitaniumMediaModule
 
@@ -84,23 +88,63 @@
 	}
 }
 
+#pragma Consts
+-(id)AVAssetExportPresetLowQuality {
+    return AVAssetExportPresetLowQuality;
+}
+-(id)AVAssetExportPresetMediumQuality {
+    return AVAssetExportPresetMediumQuality;
+}
+-(id)AVAssetExportPresetHighestQuality {
+    return AVAssetExportPresetHighestQuality;
+}
+-(id)AVAssetExportPreset640x480 {
+    return AVAssetExportPreset640x480;
+}
+-(id)AVAssetExportPreset960x540 {
+    return AVAssetExportPreset960x540;
+}
+-(id)AVAssetExportPreset1280x720 {
+    return AVAssetExportPreset1280x720;
+}
+-(id)AVAssetExportPresetAppleM4A {
+    return AVAssetExportPresetAppleM4A;
+}
+-(id)AVAssetExportPresetPassthrough {
+    return AVAssetExportPresetPassthrough;
+}
+
 #pragma Public APIs
 
--(id)example:(id)args
+-(id)createAVComposition:(id)args
 {
-	// example method
-	return @"hello world";
+	return [[[TiMediaAVCompositionProxy alloc] init] autorelease];
 }
 
--(id)exampleProp
+-(id)createAVURLAsset:(id)args
 {
-	// example property getter
-	return @"hello world";
+    NSString *url = [args objectAtIndex:0];
+    NSURL *urlUrl = [NSURL URLWithString:url];
+    return [[[TiMediaAVURLAssetProxy alloc] initWithAsset:[AVURLAsset URLAssetWithURL:urlUrl options:nil]] autorelease];
 }
 
--(void)exampleProp:(id)value
+-(id)zeroTime
 {
-	// example property setter
+	return [[[TiMediaCMTimeProxy alloc] initWithTime: kCMTimeZero] autorelease];
+}
+
+-(id)makeCMTime:(id)args
+{
+    int value = [[args objectAtIndex:0] intValue];
+    int timescale = [[args objectAtIndex:1] intValue];
+    return [[[TiMediaCMTimeProxy alloc] initWithTime: CMTimeMake(value, timescale)] autorelease];
+}
+
+-(id)makeCMTimeRange:(id)args
+{
+    CMTime start = ((TiMediaCMTimeProxy*)[args objectAtIndex:0]).time;
+    CMTime duration = ((TiMediaCMTimeProxy*)[args objectAtIndex:1]).time;
+    return [[[TiMediaCMTimeRangeProxy alloc] initWithTimeRange: CMTimeRangeMake(start, duration)] autorelease];
 }
 
 @end
