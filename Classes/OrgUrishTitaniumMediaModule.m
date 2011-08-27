@@ -171,8 +171,6 @@
     TiMediaAVAssetProxy *assetProxy = [args objectAtIndex:0];
     NSString *presetName = [args objectAtIndex:1];
     
-    NSLog(@"AssetProxy: %@, obj1: %@ ass %@", assetProxy, [assetProxy composition], [assetProxy asset]);
-    
     AVAssetExportSession *exportSession = [AVAssetExportSession exportSessionWithAsset:assetProxy.asset presetName:presetName];
     if (exportSession != nil) {
         return [[[TiMediaAVAssetExportSession alloc] initWithExportSession: exportSession] autorelease];

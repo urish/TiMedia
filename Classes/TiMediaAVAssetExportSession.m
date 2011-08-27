@@ -98,7 +98,10 @@
     [self.exportSession exportAsynchronouslyWithCompletionHandler: ^{
         NSLog(@"Media export completed, status=%@", [self status]);
         NSString *status = [self status];
-        NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:status, @"status", self.exportSession.error, "@error", nil];
+        NSDictionary * params = [NSMutableDictionary dictionary];
+        [params setValue: status forKey: @"status"];
+        [params setValue: self.exportSession.error.description forKey: @"error"];
+        [params setValue: NUMINT((self.exportSession.error != nil ? self.exportSession.error.code : 0)) forKey: @"errorCode"];
         [self fireEvent:@"complete" withObject:params];
         [self.exportSession autorelease];
     }];
