@@ -44,7 +44,7 @@
     return [[[TiMediaCMTimeProxy alloc] initWithTime: CMTimeAdd(self.time, other.time)] autorelease];
 }
 
-- (id)subtarct:(id)args {
+- (id)subtract:(id)args {
     TiMediaCMTimeProxy * other = [args objectAtIndex:0];
     return [[[TiMediaCMTimeProxy alloc] initWithTime: CMTimeSubtract(self.time, other.time)] autorelease];
 }
