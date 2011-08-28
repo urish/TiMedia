@@ -8,6 +8,7 @@
 
 #import "TiMediaAVAssetExportSession.h"
 #import "TiMediaCMTimeProxy.h"
+#import "TiMediaAVAudioMixProxy.h"
 #import "TiUtils.h"
 
 @implementation TiMediaAVAssetExportSession
@@ -22,6 +23,18 @@
     }
     
     return self;
+}
+
+- (id)audioMix {
+    if (self.exportSession.audioMix) {
+        return [[[TiMediaAVAudioMixProxy alloc] initWithAudioMix:self.exportSession.audioMix] autorelease];
+    } else {
+        return nil;
+    }
+}
+
+- (void)setAudioMix:(id)value {
+    self.exportSession.audioMix = value ? ((TiMediaAVAudioMixProxy*)value).audioMix : nil;
 }
 
 - (id)error {

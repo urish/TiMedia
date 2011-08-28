@@ -52,6 +52,18 @@ if (outputFile.exists()) {
     outputFile.deleteFile();
 }
 
+function addAudioMix(exportSession, mainTrack) {
+    // Enable the following code to slowly mute the track
+    var enableAudioMix = 0;
+    if (enableAudioMix) {
+        var audioMix = timedia.createAVAudioMix();
+        var audioMixParams = timedia.createAVAudioMixInputParameters(mainTrack);
+        audioMix.inputParameters = [audioMixParams];
+        audioMixParams.setVolumeRange(1, 0, timedia.makeCMTimeRange(timedia.zeroTime, currentTime));
+        exportSession.audioMix = audioMix;
+    }
+}
+
 function exportCompleteCallback(e) {
     Ti.API.info("Export completed, file: " + outputFile.nativePath + ", status: " + e.status);
     alert("Export completed, file: " + outputFile.nativePath + ", status: " + e.status);
@@ -70,6 +82,7 @@ function exportCompleteCallback(e) {
 var exportSession = timedia.createAVAssetExportSession(composition, timedia.AVAssetExportPresetAppleM4A);
 exportSession.outputURL = outputFile.nativePath;
 exportSession.outputFileType = timedia.AVFileTypeAppleM4A;
+addAudioMix(exportSession, track);
 exportSession.addEventListener("complete", exportCompleteCallback);
 alert("Exporting to: " + exportSession.outputURL);
 exportSession.start();

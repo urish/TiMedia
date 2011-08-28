@@ -40,6 +40,10 @@
 		6F0FB3421408F3BC001BFC21 /* TiMediaAVAssetProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB3401408F3BB001BFC21 /* TiMediaAVAssetProxy.m */; };
 		6F0FB3451408F858001BFC21 /* TiMediaAVAssetExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0FB3431408F857001BFC21 /* TiMediaAVAssetExportSession.h */; };
 		6F0FB3461408F858001BFC21 /* TiMediaAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB3441408F857001BFC21 /* TiMediaAVAssetExportSession.m */; };
+		6F89E908140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F89E906140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.h */; };
+		6F89E909140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F89E907140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.m */; };
+		6F89E912140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F89E910140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.h */; };
+		6F89E913140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F89E911140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.m */; };
 		AA747D9F0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +79,11 @@
 		6F0FB3431408F857001BFC21 /* TiMediaAVAssetExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVAssetExportSession.h; sourceTree = "<group>"; };
 		6F0FB3441408F857001BFC21 /* TiMediaAVAssetExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVAssetExportSession.m; sourceTree = "<group>"; };
 		6F0FB3471409070E001BFC21 /* app.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = app.js; path = example/app.js; sourceTree = "<group>"; };
+		6F89E906140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVAudioMixInputParametersProxy.h; sourceTree = "<group>"; };
+		6F89E907140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVAudioMixInputParametersProxy.m; sourceTree = "<group>"; };
+		6F89E90B140AD5CF00D3E4C0 /* manifest */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = manifest; sourceTree = "<group>"; };
+		6F89E910140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVAudioMixProxy.h; sourceTree = "<group>"; };
+		6F89E911140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVAudioMixProxy.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgUrishTitaniumMedia_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libOrgUrishTitaniumMedia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOrgUrishTitaniumMedia.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +149,10 @@
 				6F0FB3381408733A001BFC21 /* TiMediaCMTimeRangeProxy.m */,
 				6F0FB33F1408F3BB001BFC21 /* TiMediaAVAssetProxy.h */,
 				6F0FB3401408F3BB001BFC21 /* TiMediaAVAssetProxy.m */,
+				6F89E906140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.h */,
+				6F89E907140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.m */,
+				6F89E910140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.h */,
+				6F89E911140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -147,6 +160,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				6F89E90B140AD5CF00D3E4C0 /* manifest */,
 				AA747D9E0F9514B9006C5449 /* OrgUrishTitaniumMedia_Prefix.pch */,
 				6F0FB3471409070E001BFC21 /* app.js */,
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
@@ -171,6 +185,8 @@
 				6F0FB33D14087527001BFC21 /* TiMediaAVCompositionTrackProxy.h in Headers */,
 				6F0FB3411408F3BC001BFC21 /* TiMediaAVAssetProxy.h in Headers */,
 				6F0FB3451408F858001BFC21 /* TiMediaAVAssetExportSession.h in Headers */,
+				6F89E908140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.h in Headers */,
+				6F89E912140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +266,8 @@
 				6F0FB33E14087527001BFC21 /* TiMediaAVCompositionTrackProxy.m in Sources */,
 				6F0FB3421408F3BC001BFC21 /* TiMediaAVAssetProxy.m in Sources */,
 				6F0FB3461408F858001BFC21 /* TiMediaAVAssetExportSession.m in Sources */,
+				6F89E909140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.m in Sources */,
+				6F89E913140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

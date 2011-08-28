@@ -9,10 +9,13 @@
 #import "TiHost.h"
 #import "TiUtils.h"
 #import "TiMediaAVCompositionProxy.h"
+#import "TiMediaAVCompositionTrackProxy.h"
 #import "TiMediaCMTimeProxy.h"
 #import "TiMediaCMTimeRangeProxy.h"
 #import "TiMediaAVURLAssetProxy.h"
 #import "TiMediaAVAssetExportSession.h"
+#import "TiMediaAVAudioMixProxy.h"
+#import "TiMediaAVAudioMixInputParametersProxy.h"
 
 @implementation OrgUrishTitaniumMediaModule
 
@@ -177,6 +180,16 @@
     }
     NSLog(@"Warning: AVAssetExportSession creation failed! (asset=%@, presetName=%@)", assetProxy.asset, presetName);
     return nil;
+}
+
+-(id)createAVAudioMix:(id)args {
+    return [[[TiMediaAVAudioMixProxy alloc] initWithAudioMix:[AVMutableAudioMix audioMix]] autorelease];
+}
+
+-(id)createAVAudioMixInputParameters:(id)args {
+    TiMediaAVCompositionTrackProxy *trackProxy = [args objectAtIndex:0];
+    AVMutableAudioMixInputParameters *inputParams = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:trackProxy.track];
+    return [[[TiMediaAVAudioMixInputParametersProxy alloc] initWithInputParameters:inputParams] autorelease];
 }
 
 -(id)zeroTime
