@@ -16,6 +16,7 @@
 #import "TiMediaAVAssetExportSession.h"
 #import "TiMediaAVAudioMixProxy.h"
 #import "TiMediaAVAudioMixInputParametersProxy.h"
+#import "TiMediaAVMetadataItemProxy.h"
 
 @implementation OrgUrishTitaniumMediaModule
 
@@ -190,6 +191,10 @@
     TiMediaAVCompositionTrackProxy *trackProxy = [args objectAtIndex:0];
     AVMutableAudioMixInputParameters *inputParams = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:trackProxy.track];
     return [[[TiMediaAVAudioMixInputParametersProxy alloc] initWithInputParameters:inputParams] autorelease];
+}
+
+-(id)createAVMetadataItem:(id)args {
+    return [[[TiMediaAVMetadataItemProxy alloc] initWithMetadataItem:[AVMutableMetadataItem metadataItem]] autorelease];
 }
 
 -(id)zeroTime

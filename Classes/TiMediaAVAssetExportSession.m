@@ -9,6 +9,7 @@
 #import "TiMediaAVAssetExportSession.h"
 #import "TiMediaCMTimeProxy.h"
 #import "TiMediaAVAudioMixProxy.h"
+#import "TiMediaAVMetadataItemProxy.h"
 #import "TiUtils.h"
 
 @implementation TiMediaAVAssetExportSession
@@ -51,6 +52,23 @@
 
 - (id)maxDuration {
     return [[[TiMediaCMTimeProxy alloc] initWithTime:self.exportSession.maxDuration] autorelease];
+}
+
+- (id)metadata {
+    NSMutableArray * result = [NSMutableArray arrayWithCapacity:self.exportSession.metadata.count];
+    for (AVMetadataItem *metadataItem in self.exportSession.metadata) {
+        [result addObject:[[[TiMediaAVMetadataItemProxy alloc] initWithMetadataItem:metadataItem] autorelease]];
+    }
+    return result;
+}
+
+- (void)setMetadata: (id)value {
+    NSArray *inputArray = (NSArray*)value;
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:inputArray.count];
+    for (TiMediaAVMetadataItemProxy *metadataItemProxy in inputArray) {
+        [array addObject:metadataItemProxy.metadataItem];
+    }
+    self.exportSession.metadata = array;
 }
 
 - (id)outputURL {

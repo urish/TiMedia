@@ -40,6 +40,8 @@
 		6F0FB3421408F3BC001BFC21 /* TiMediaAVAssetProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB3401408F3BB001BFC21 /* TiMediaAVAssetProxy.m */; };
 		6F0FB3451408F858001BFC21 /* TiMediaAVAssetExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0FB3431408F857001BFC21 /* TiMediaAVAssetExportSession.h */; };
 		6F0FB3461408F858001BFC21 /* TiMediaAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FB3441408F857001BFC21 /* TiMediaAVAssetExportSession.m */; };
+		6F427B4C140AF4B300B028B2 /* TiMediaAVMetadataItemProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F427B4A140AF4B300B028B2 /* TiMediaAVMetadataItemProxy.h */; };
+		6F427B4D140AF4B300B028B2 /* TiMediaAVMetadataItemProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F427B4B140AF4B300B028B2 /* TiMediaAVMetadataItemProxy.m */; };
 		6F89E908140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F89E906140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.h */; };
 		6F89E909140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F89E907140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.m */; };
 		6F89E912140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F89E910140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.h */; };
@@ -79,6 +81,8 @@
 		6F0FB3431408F857001BFC21 /* TiMediaAVAssetExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVAssetExportSession.h; sourceTree = "<group>"; };
 		6F0FB3441408F857001BFC21 /* TiMediaAVAssetExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVAssetExportSession.m; sourceTree = "<group>"; };
 		6F0FB3471409070E001BFC21 /* app.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = app.js; path = example/app.js; sourceTree = "<group>"; };
+		6F427B4A140AF4B300B028B2 /* TiMediaAVMetadataItemProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVMetadataItemProxy.h; sourceTree = "<group>"; };
+		6F427B4B140AF4B300B028B2 /* TiMediaAVMetadataItemProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVMetadataItemProxy.m; sourceTree = "<group>"; };
 		6F89E906140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaAVAudioMixInputParametersProxy.h; sourceTree = "<group>"; };
 		6F89E907140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaAVAudioMixInputParametersProxy.m; sourceTree = "<group>"; };
 		6F89E90B140AD5CF00D3E4C0 /* manifest */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = manifest; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				6F89E907140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.m */,
 				6F89E910140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.h */,
 				6F89E911140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.m */,
+				6F427B4A140AF4B300B028B2 /* TiMediaAVMetadataItemProxy.h */,
+				6F427B4B140AF4B300B028B2 /* TiMediaAVMetadataItemProxy.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -187,6 +193,7 @@
 				6F0FB3451408F858001BFC21 /* TiMediaAVAssetExportSession.h in Headers */,
 				6F89E908140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.h in Headers */,
 				6F89E912140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.h in Headers */,
+				6F427B4C140AF4B300B028B2 /* TiMediaAVMetadataItemProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +275,7 @@
 				6F0FB3461408F858001BFC21 /* TiMediaAVAssetExportSession.m in Sources */,
 				6F89E909140AD2F500D3E4C0 /* TiMediaAVAudioMixInputParametersProxy.m in Sources */,
 				6F89E913140AD6F800D3E4C0 /* TiMediaAVAudioMixProxy.m in Sources */,
+				6F427B4D140AF4B300B028B2 /* TiMediaAVMetadataItemProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

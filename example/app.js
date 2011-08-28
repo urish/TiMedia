@@ -12,7 +12,9 @@ var timedia = require('org.urish.titanium.media');
 Ti.API.info("module is => " + timedia);
 
 function loadSample(name) {
-    return timedia.createAVURLAsset(Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory, name).nativePath);
+    asset = timedia.createAVURLAsset(Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory, name).nativePath);
+    asset.name = name.split(".")[0];
+    return asset;
 }
 
 var Do = loadSample("Do.m4a");
@@ -31,6 +33,7 @@ var sheetMusic = [
 
 var composition = timedia.createAVComposition();
 var track = composition.createAudioTrack();
+var metadata = [];
 
 var currentTime = timedia.zeroTime;
 for (var i = 0; i < sheetMusic.length; i++) {
@@ -44,6 +47,15 @@ for (var i = 0; i < sheetMusic.length; i++) {
         duration = currentAsset.duration;
     }
     track.insertAudio(currentTime, currentAsset, timedia.makeCMTimeRange(timedia.zeroTime, duration));
+    
+    var metadataItem = timedia.createAVMetadataItem();
+    metadataItem.keySpace = "demo";
+    metadataItem.key = "Note-" + i;
+    metadataItem.value = currentAsset.name;
+    metadataItem.time = currentTime;
+    metadataItem.duration = duration;
+    metadata[metadata.length] = metadataItem;
+    
     currentTime = currentTime.add(duration);
 }
 
@@ -82,6 +94,7 @@ function exportCompleteCallback(e) {
 var exportSession = timedia.createAVAssetExportSession(composition, timedia.AVAssetExportPresetAppleM4A);
 exportSession.outputURL = outputFile.nativePath;
 exportSession.outputFileType = timedia.AVFileTypeAppleM4A;
+exportSession.metadata = metadata;
 addAudioMix(exportSession, track);
 exportSession.addEventListener("complete", exportCompleteCallback);
 alert("Exporting to: " + exportSession.outputURL);
